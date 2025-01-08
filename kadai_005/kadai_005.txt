@@ -1,0 +1,37 @@
+PS C:\Users\admin\git_challenge> git add hello_world.txt
+PS C:\Users\admin\git_challenge> git commit -m "hello_world.txtを追加"
+[main (root-commit) 0bc47f9] hello_world.txtを追加
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello_world.txt
+PS C:\Users\admin\git_challenge> git add hello_world.txt
+PS C:\Users\admin\git_challenge> git commit -m "日本語訳を 追加"
+[main 3255a4f] 日本語訳を追加
+ 1 file changed, 2 insertions(+)
+PS C:\Users\admin\git_challenge> git log --oneline
+3255a4f (HEAD -> main) 日本語訳を追加
+0bc47f9 hello_world.txtを追加
+PS C:\Users\admin\git_challenge> git remote add origin git@github.com:kazuma-sasaki23/github-basic-kadai.git
+PS C:\Users\admin\git_challenge> git remote -v
+origin  git@github.com:kazuma-sasaki23/github-basic-kadai.git (fetch)
+origin  git@github.com:kazuma-sasaki23/github-basic-kadai.git (push)
+PS C:\Users\admin\git_challenge> git push -u origin main
+Enter passphrase for key '/c/Users/admin/.ssh/id_rsa': 
+To github.com:kazuma-sasaki23/github-basic-kadai.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:kazuma-sasaki23/github-basic-kadai.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\admin\git_challenge> git push origin main --force
+Enter passphrase for key '/c/Users/admin/.ssh/id_rsa': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 544 bytes | 272.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:kazuma-sasaki23/github-basic-kadai.git
+ + 3d6bbe3...3255a4f main -> main (forced update)
+PS C:\Users\admin\git_challenge> 
